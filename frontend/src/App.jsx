@@ -5,7 +5,7 @@ import SectorPage from './pages/SectorPage';
 import BurnoutPage from './pages/BurnoutPage';
 import { Layers, Activity, AlertTriangle, ShieldAlert, Cpu } from 'lucide-react';
 
-const API_BASE = "http://127.0.0.1:8000/api/v1";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api/v1";
 
 const REGIONS = [
   { id: "", name: "All Regions" },

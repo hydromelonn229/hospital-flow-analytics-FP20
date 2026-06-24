@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend, PolarGrid, PolarAngleAxis, Radar, RadarChart } from 'recharts';
 import { Activity, Clock, ShieldAlert, BedDouble, AlertCircle } from 'lucide-react';
 
-const API_BASE = "http://127.0.0.1:8000/api/v1";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api/v1";
 
 // Helper to render skeleton state
 const Skeleton = ({ className }) => (

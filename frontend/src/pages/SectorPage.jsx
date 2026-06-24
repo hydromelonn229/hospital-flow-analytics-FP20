@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Cell, ReferenceLine, Legend } from 'recharts';
 import { Search, ChevronDown, ChevronUp, AlertCircle } from 'lucide-react';
 
-const API_BASE = "http://127.0.0.1:8000/api/v1";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api/v1";
 
 const Skeleton = ({ className }) => (
   <div className={`animate-pulse bg-slate-800 rounded-md ${className}`} />
