@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #0A0E1A;
+  --color-brand-card: #131926;
+  --color-brand-cyan: #0EA5E9;
+  --color-brand-red: #EF4444;
+  --color-brand-purple: #6366F1;
+  --color-brand-grey: #64748B;
+  --color-brand-green: #10B981;
+  
+  --font-sans: 'Inter', 'Outfit', sans-serif;
+}
+
+/* Custom Base Styles for premium clinical layout */
+body {
+  background-color: #0A0E1A;
+  color: #F8FAFC;
+  font-family: 'Inter', 'Outfit', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Custom thin scrollbars for dashboard widgets */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0E1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
