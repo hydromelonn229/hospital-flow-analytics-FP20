@@ -259,6 +259,24 @@ export default function BurnoutPage({ filters }) {
         </div>
       )}
 
+      {/* Financial Outlier Warning Card */}
+      {(!filters.hospital || filters.hospital === "all" || filters.hospital === "H11") && (
+        <div className="bg-brand-red/10 border border-brand-red/35 rounded-md p-4 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <AlertCircle className="w-5 h-5 text-brand-red shrink-0" />
+            <div>
+              <h5 className="font-bold text-slate-200 text-xs uppercase tracking-wider">Critical Financial Deficit Outlier</h5>
+              <p className="text-xs text-slate-400 mt-1">
+                Operational review indicates that <span className="font-bold text-brand-red">Bristol Royal Infirmary (H11)</span> is the only facility across the entire hospital network currently operating with a negative net profit margin.
+              </p>
+            </div>
+          </div>
+          <div className="bg-slate-900/50 border border-slate-800 px-2.5 py-1.5 rounded text-[10px] text-brand-red font-bold uppercase tracking-wider shrink-0">
+            Action Required
+          </div>
+        </div>
+      )}
+
       {/* Top Row Grid (50/50 Bubble Correlation vs Waterfall Bridge) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Bubble Chart */}
